@@ -8,7 +8,17 @@
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "lint": "eslint . --ext \"src/**/*.{jsx,ts,tsx,css}\"",
     "lint:fix": "eslint . --ext \"src/**/*.{jsx,ts,tsx,css}\" --fix",
-    "format": "npx prettier --write \"src/**/*.{jsx,ts,tsx,css}\""
+    "format": "npx prettier --write \"src/**/*.{jsx,ts,tsx,css}\"",
+    "prepare": "husky install",
+    "execute-husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": "npm run lint:fix"
   },
   "repository": {
     "type": "git",
@@ -30,6 +40,8 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "style-loader": "^3.3.1",
     "terser-webpack-plugin": "^5.3.6",
