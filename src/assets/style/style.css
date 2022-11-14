@@ -1,0 +1,292 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* header */
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: blueviolet;
+  width: 100%;
+  height: 100px;
+}
+
+.logo {
+  margin-left: 30px;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 30px;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  margin-right: 10px;
+}
+.search-icon {
+  background: url(../img/icon_search.png);
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.search-input {
+  transition: 0.5s;
+  width: 0;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 20px;
+  color: #fff;
+}
+
+.search-input.active {
+  transition: 0.5s;
+  width: 180px;
+}
+
+input::placeholder {
+  color: #fff;
+  font-size: 20px;
+}
+
+.active {
+}
+.search.active {
+}
+
+/* .input:hover{
+    width: 98%;
+    padding-left: 5px;
+    transition: all 0.5s 0.8s ease;
+  }
+
+  input::placeholder {
+    color: #fff;
+  } */
+
+.basket {
+  background: url(../img/icon_basket.png);
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* main */
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.content__filters {
+  background: rgb(214, 198, 198);
+  width: 240px;
+}
+
+.title-filters {
+  text-align: center;
+  font-size: 20px;
+}
+
+.filters {
+  margin: 10px 0 0 10px;
+}
+
+.filter {
+  font-size: 14px;
+  font-weight: 100;
+  margin: 10px 0;
+}
+
+.title-filter {
+  font-weight: 700;
+}
+
+/* //asdasfsadfsd */
+
+/* body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+} */
+
+.count,
+.years {
+  position: relative;
+  margin-top: 10px;
+  /* pointer-events: none; */
+  width: 200px;
+  height: 40px;
+  padding-bottom: 10px;
+}
+
+.content_min-max {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.get-left {
+}
+.input-min,
+.input-max {
+  text-align: center;
+  width: 50px;
+  border-radius: 6px;
+  border: 1px solid rgb(122, 120, 124);
+  height: 20px;
+}
+
+.get-rigth {
+}
+
+.input-slider {
+  position: relative;
+  pointer-events: none;
+
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-left,
+.input-right {
+  position: absolute;
+  background: none;
+  z-index: 1;
+  height: 10px;
+  display: block;
+  margin: 0;
+  width: 100%;
+  appearance: none;
+  /* opacity: 0; */
+}
+
+.input-left::-webkit-slider-thumb,
+.input-right::-webkit-slider-thumb {
+  pointer-events: all;
+}
+
+.slider {
+  position: relative;
+  background: #a7a0a0;
+  width: 100%;
+  height: 5px;
+  border-radius: 4px;
+}
+
+.progress {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  background: #17a2b8;
+  height: 100%;
+  border-radius: 4px;
+}
+
+/*  0 5px;
+  width: 30px;
+} */
+
+.item {
+  height: 25px;
+  display: flex;
+  align-items: center;
+}
+
+label {
+  display: flex;
+  align-items: center;
+}
+
+.content__product {
+  background: rgb(196, 216, 164);
+  width: calc(100% - 240px);
+}
+
+.title_product {
+}
+
+.filter_assortment {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.title-assortment {
+}
+
+.assortment-items {
+  margin-left: 5px;
+}
+
+.select-control {
+  background: rgb(196, 216, 164);
+  font-size: 12px;
+  border-radius: 5px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.meals {
+}
+
+.product {
+}
+
+.items_product {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.item_product {
+  padding: 10px;
+}
+
+.card {
+  background: wheat;
+  width: 260px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.figure {
+  background: url(../img/figure.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 128px;
+  height: 128px;
+  margin-bottom: 15px;
+}
+
+.title-card {
+  margin-top: 5px;
+}

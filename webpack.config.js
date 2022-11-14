@@ -16,11 +16,15 @@ const optimization = () => {
 };
 
 module.exports = {
+  devtool: 'inline-source-map',
   context: path.resolve(__dirname, 'src'),
   entry: './index.ts',
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js', '.css'],
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -32,11 +36,16 @@ module.exports = {
     new CleanWebpackPlugin(),
   ],
   devServer: {
-    port: 4200,
+    port: 3000,
   },
   optimization: optimization(),
   module: {
     rules: [
+      {
+        exclude: /node_modules/,
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+      },
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
@@ -44,6 +53,18 @@ module.exports = {
       {
         test: /\.(png | svg | jpg)$/,
         type: 'asset/resource',
+      },
+      {
+        test: /\.(ttf | woff | eot)$/,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.xml$/,
+        use: ['xml-loader'],
+      },
+      {
+        test: /\.csv$/,
+        use: ['csv-loader'],
       },
     ],
   },

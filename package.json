@@ -6,6 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
     "build": "cross-env NODE_ENV=production webpack --mode production",
+    "dev": "cross-env NODE_ENV=development webpack --mode development --watch",
     "lint": "eslint . --ext \"src/**/*.{jsx,ts,tsx,css}\"",
     "lint:fix": "eslint . --ext \"src/**/*.{jsx,ts,tsx,css}\" --fix",
     "format": "npx prettier --write \"src/**/*.{jsx,ts,tsx,css}\"",
