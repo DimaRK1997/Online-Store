@@ -8,7 +8,7 @@ export function renderCountSlider(data: Array<Product>) {
   const min = Math.min.apply(null, counts);
   const max = Math.max.apply(null, counts);
 
-  const element = document.getElementById('count');
+  const element: HTMLElement = document.getElementById('count');
 
   element.innerHTML = `
   <div class="content_min-max">

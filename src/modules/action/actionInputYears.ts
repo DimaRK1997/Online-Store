@@ -1,8 +1,7 @@
 import { setLeftValue, setRightValue, setMaxValue, setMinValue } from './slider';
 
-const years: HTMLElement = document.querySelector('.years');
-
-years.addEventListener('input', (e) => {
+export function actionInputYears(e: Event) {
+  const years: HTMLElement = document.querySelector('.years');
   const target = e.target as HTMLElement;
   if (target.classList.contains('input-left')) {
     setLeftValue(years);
@@ -16,4 +15,4 @@ years.addEventListener('input', (e) => {
   if (target.classList.contains('input-max')) {
     setMaxValue(years);
   }
-});
+}

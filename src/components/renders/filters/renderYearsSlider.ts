@@ -8,7 +8,7 @@ export function renderYearSlider(data: Array<Product>) {
   const min = Math.min.apply(null, years);
   const max = Math.max.apply(null, years);
 
-  const element = document.getElementById('years');
+  const element: HTMLElement = document.getElementById('years');
 
   element.innerHTML = `
   <div class="content_min-max">

@@ -2,9 +2,7 @@ import './assets/style/style';
 
 import data from './data/db';
 
-import './modules/actionSearch'; //search
-import './modules/actionYearSlider'; //slider
-import './modules/actionCountSlider'; //slider
+import './modules/actions';
 
 import { renderElements } from './components/renderElements';
 

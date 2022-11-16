@@ -1,8 +1,7 @@
 import { setLeftValue, setMaxValue, setMinValue, setRightValue } from './slider';
 
-const count: HTMLElement = document.querySelector('.count');
-
-count.addEventListener('input', (e) => {
+export function actionInputCount(e: Event) {
+  const count: HTMLElement = document.querySelector('.count');
   const target = e.target as HTMLElement;
   if (target.classList.contains('input-left')) {
     setLeftValue(count);
@@ -16,4 +15,4 @@ count.addEventListener('input', (e) => {
   if (target.classList.contains('input-max')) {
     setMaxValue(count);
   }
-});
+}
