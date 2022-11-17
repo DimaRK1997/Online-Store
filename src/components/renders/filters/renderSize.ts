@@ -1,4 +1,4 @@
-import { Product } from '../../../data/types';
+import { Product } from '../../../types';
 
 export function renderSize(data: Array<Product>) {
   const colors: Array<string> = [];

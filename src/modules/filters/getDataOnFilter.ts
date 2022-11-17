@@ -1,8 +1,8 @@
-import { Product } from '../../data/types';
-import { Filter } from './actionClickFilter';
+import { Product } from '../../types';
 import data from '../../data/db';
+import { Filter } from '../../types';
 
-export function getSortData(filter: Filter) {
+export function getDataFilter(filter: Filter) {
   let result: Array<Product> = [];
   result = data.filter((el) => {
     if (
@@ -11,9 +11,8 @@ export function getSortData(filter: Filter) {
         +filter.count[0] <= +el.count &&
         +el.count <= +filter.count[1]) ||
       (filter.year.length <= 0 && filter.count.length <= 0)
-    ) {
+    )
       return true;
-    }
   });
 
   if (filter.shape.length > 0) {
@@ -29,12 +28,8 @@ export function getSortData(filter: Filter) {
   }
 
   result = result.filter((el) => {
-    if (filter.favorite === false) {
-      return true;
-    }
-    if (filter.favorite === true && el.favorite === true) {
-      return true;
-    }
+    if (filter.favorite === false) return true;
+    if (filter.favorite === true && el.favorite === true) return true;
   });
 
   return result;

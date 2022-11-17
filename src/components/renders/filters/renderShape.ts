@@ -1,4 +1,4 @@
-import { Product } from '../../../data/types';
+import { Product } from '../../../types';
 
 export function renderShapes(data: Array<Product>) {
   const shapes: Array<string> = [];

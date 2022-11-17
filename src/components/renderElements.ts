@@ -1,4 +1,4 @@
-import { Product } from '../data/types';
+import { Product } from '../types';
 import { renderColors } from './renders/filters/renderColors';
 import { renderCountSlider } from './renders/filters/renderCountSlider';
 import { renderShapes } from './renders/filters/renderShape';

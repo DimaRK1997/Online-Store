@@ -1,3 +1,10 @@
+export function setInputSlider(element: HTMLElement) {
+  setLeftValue(element);
+  setRightValue(element);
+  setMinValue(element);
+  setMaxValue(element);
+}
+
 export function setLeftValue(element: HTMLElement) {
   const inputleft: HTMLInputElement = element.querySelector('.input-left');
   const inputright: HTMLInputElement = element.querySelector('.input-right');
