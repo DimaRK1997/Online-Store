@@ -315,17 +315,23 @@ label {
 }
 
 .item_product {
-  padding: 10px;
+  margin: 10px;
 }
 
 .card {
-  background: wheat;
-  width: 260px;
+  background: rgb(240, 240, 240);
+  width: 220px;
   height: 300px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #5c4f4f;
+}
+
+.title-name {
 }
 
 .figure {
@@ -334,9 +340,57 @@ label {
   background-size: 100%;
   width: 128px;
   height: 128px;
-  margin-bottom: 15px;
+  margin: 10px 0;
 }
 
-.title-card {
-  margin-top: 5px;
+.content_info {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.title_card {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.title_card > span {
+  font-size: 12px;
+  color: rgb(67, 63, 63);
+}
+
+.title_card > span {
+  font-size: 12px;
+  color: rgb(67, 63, 63);
+}
+
+.title_card > p {
+  font-size: 14px;
+  color: black;
+  margin: 5px 0 10px;
+}
+
+.btn-basket {
+  background: #464cf9ed;
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn-basket:hover {
+  cursor: pointer;
+  background: #417d61;
+}
+
+.marker {
+  background: #417d61;
+}
+
+.marker:hover {
+  background: #417d61;
+  background: #464cf9ed;
 }
