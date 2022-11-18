@@ -1,5 +1,4 @@
 export type Product = {
-  [index: string]: string | boolean;
   num: string;
   name: string;
   count: string;
@@ -11,7 +10,6 @@ export type Product = {
 };
 
 export type Filter = {
-  [index: string]: Array<string> | boolean;
   num: Array<string>;
   name: Array<string>;
   count: Array<string>;

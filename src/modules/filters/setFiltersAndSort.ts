@@ -1,6 +1,7 @@
+import { Filter } from '../../types';
 import { showSortData } from '../action/actionClickFilter';
 import { setInputSlider } from '../action/slider';
-import { objectSave } from '../storage/objectSave';
+import { objectSave } from '../storage/storage';
 
 export function setFilters() {
   setInputFilters();
@@ -15,7 +16,7 @@ export function setFilters() {
   showSortData();
 }
 
-function setCheckedFilters(name: string) {
+function setCheckedFilters<Key extends keyof Filter>(name: Key) {
   const elements: NodeListOf<HTMLInputElement> = document.querySelectorAll(`#${name}`);
 
   elements.forEach((e1) => {

@@ -1,4 +1,4 @@
-import { objectSave } from '../../../modules/storage/objectSave';
+import { objectSave } from '../../../modules/storage/storage';
 import { Product } from '../../../types';
 
 export function renderYearSlider(data: Array<Product>) {

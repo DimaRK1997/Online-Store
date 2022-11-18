@@ -2,9 +2,10 @@ import { actionClickSearch } from './action/actionClickSearch';
 import { actionInputYears } from './action/actionInputYears';
 import { actionInputCount } from './action/actionInputCount';
 import { actionClickFilter } from './action/actionClickFilter';
-import { actionProduct } from './action/actionProduct';
+import { actionProduct } from './action/actionBaskeProduct';
 import { actionSortSelection } from './action/actionSortSelection';
 import { setFilters } from './filters/setFiltersAndSort';
+import { actionSearch } from './action/actionSearch';
 
 const btn: HTMLElement = document.querySelector('.search-icon');
 btn.addEventListener('click', actionClickSearch);
@@ -25,3 +26,6 @@ const product: HTMLElement = document.querySelector('.product');
 product.addEventListener('click', actionProduct);
 
 document.addEventListener('DOMContentLoaded', setFilters);
+
+const search: HTMLInputElement = document.querySelector('.search-input');
+search.addEventListener('input', actionSearch);

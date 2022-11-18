@@ -6,7 +6,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1400px;
 }
 
 /* header */
@@ -88,7 +88,12 @@ label:hover {
   cursor: pointer;
 }
 
+input[type='search']:hover {
+  cursor: text;
+}
+
 .basket {
+  position: relative;
   background: url(../img/icon_basket.png);
   background-size: 35px 35px;
   background-repeat: no-repeat;
@@ -97,6 +102,23 @@ label:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.size-basket {
+  position: absolute;
+  font-size: 14px;
+  right: -2px;
+  top: -10px;
+  font-weight: 700;
+  color: #494b53;
+  width: 20px;
+  line-height: 20px;
+  height: 20px;
+  background: #c0bfbe;
+  border-radius: 8px;
+  box-shadow: 1px 1px 3px 2px #c7c4c4;
+  text-align: center;
+  display: none;
 }
 
 /* main */
@@ -413,7 +435,7 @@ label {
   background: #417d61;
 }
 
-.marker:hover {
+/* .marker:hover {
   background: #417d61;
   background: #464cf9ed;
-}
+} */

@@ -15,42 +15,22 @@ export function getDataSelect(option: string, filter: Filter) {
   return updateData;
 }
 
-function mySortAZ(data: Array<Product>, key: string) {
-  data.sort((a, b) => {
-    const x = a[key] as string;
-    const y = b[key] as string;
-    if (x[0].toLowerCase() > y[0].toLowerCase()) return 1;
-    if (x[0].toLowerCase() < y[0].toLowerCase()) return -1;
-    return 0;
-  });
+function mySortAZ<Key extends keyof Product>(data: Product[], key: Key) {
+  data.sort((a, b) => ((a[key] as string).toLowerCase() > (b[key] as string).toLowerCase() ? 1 : -1));
   return data;
 }
 
-function mySortZA(data: Array<Product>, key: string) {
-  data.sort((a, b) => {
-    const x = a[key] as string;
-    const y = b[key] as string;
-    if (x[0].toLowerCase() < y[0].toLowerCase()) return 1;
-    if (x[0].toLowerCase() > y[0].toLowerCase()) return -1;
-    return 0;
-  });
+function mySortZA<Key extends keyof Product>(data: Product[], key: Key) {
+  data.sort((a, b) => ((a[key] as string).toLowerCase() < (b[key] as string).toLowerCase() ? 1 : -1));
   return data;
 }
 
-function mySortIncr(data: Array<Product>, key: string) {
-  data.sort((a, b) => {
-    if (a[key] > b[key]) return -1;
-    if (a[key] < b[key]) return 1;
-    return 0;
-  });
+function mySortIncr<Key extends keyof Product>(data: Product[], key: Key) {
+  data.sort((a, b) => (a[key] < b[key] ? 1 : -1));
   return data;
 }
 
-function mySortDecr(data: Array<Product>, key: string) {
-  data.sort((a, b) => {
-    if (a[key] > b[key]) return 1;
-    if (a[key] < b[key]) return -1;
-    return 0;
-  });
+function mySortDecr<Key extends keyof Product>(data: Array<Product>, key: Key) {
+  data.sort((a, b) => (a[key] > b[key] ? 1 : -1));
   return data;
 }

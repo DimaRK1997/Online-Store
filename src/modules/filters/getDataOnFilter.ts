@@ -35,8 +35,8 @@ export function getDataFilter(filter: Filter) {
   return result;
 }
 
-function myFilter(result: Array<Product>, property: Array<string>, key: string) {
-  result = result.filter((el) => {
+function myFilter<Key extends keyof Product>(result: Product[], property: Array<string>, key: Key) {
+  return result.filter((el) => {
     let bool = false;
     property.map((eF) => {
       if (el[key] === eF) {
@@ -45,5 +45,4 @@ function myFilter(result: Array<Product>, property: Array<string>, key: string) 
     });
     return bool;
   });
-  return result;
 }

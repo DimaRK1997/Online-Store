@@ -1,7 +1,6 @@
 import { renderProducts } from '../../components/renders/renderProducts';
 import { getDataSelect } from '../filters/getDataOnSelect';
-import { objectSave } from '../storage/objectSave';
-import { setStorage } from '../storage/storage';
+import { objectSave, setStorage } from '../storage/storage';
 
 export function actionSortSelection(e: Event) {
   const target = e.target as HTMLOptionElement;

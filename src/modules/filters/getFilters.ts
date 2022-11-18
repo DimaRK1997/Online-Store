@@ -1,5 +1,4 @@
-import { objectSave } from '../storage/objectSave';
-import { setStorage } from '../storage/storage';
+import { objectSave, setStorage } from '../storage/storage';
 
 export function getFilters() {
   const years: HTMLElement = document.getElementById('years');
