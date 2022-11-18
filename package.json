@@ -9,9 +9,7 @@
     "dev": "cross-env NODE_ENV=development webpack --mode development --watch",
     "lint": "eslint . --ext \"src/**/*.{jsx,ts,tsx,css}\"",
     "lint:fix": "eslint . --ext \"src/**/*.{jsx,ts,tsx,css}\" --fix",
-    "format": "npx prettier --write \"src/**/*.{jsx,ts,tsx,css}\"",
-    "prepare": "husky install",
-    "execute-husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\""
+    "format": "npx prettier --write \"src/**/*.{jsx,ts,tsx,css}\""
   },
   "husky": {
     "hooks": {

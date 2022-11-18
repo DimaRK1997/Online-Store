@@ -1,7 +1,7 @@
 import { Product } from '../../../types';
 
 export function renderColors(data: Array<Product>) {
-  const colors: Array<string> = [];
+  const colors: string[] = [];
 
   data.map((el) => colors.push(el.color));
 

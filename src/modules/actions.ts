@@ -2,7 +2,7 @@ import { actionClickSearch } from './action/actionClickSearch';
 import { actionInputYears } from './action/actionInputYears';
 import { actionInputCount } from './action/actionInputCount';
 import { actionClickFilter } from './action/actionClickFilter';
-import { actionProduct } from './action/actionBaskeProduct';
+import { actionProduct } from './action/actionClickBaskeProduct';
 import { actionSortSelection } from './action/actionSortSelection';
 import { setFilters } from './filters/setFiltersAndSort';
 import { actionSearch } from './action/actionSearch';

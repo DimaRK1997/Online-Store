@@ -2,7 +2,7 @@ import { objectSave } from '../../../modules/storage/storage';
 import { Product } from '../../../types';
 
 export function renderYearSlider(data: Array<Product>) {
-  const years: Array<number> = [];
+  const years: number[] = [];
 
   data.map((el) => years.push(+el.year));
 

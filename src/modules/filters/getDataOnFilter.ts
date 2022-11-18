@@ -1,9 +1,12 @@
 import { Product } from '../../types';
 import data from '../../data/db';
-import { Filter } from '../../types';
+import { objectSave } from '../storage/storage';
 
-export function getDataFilter(filter: Filter) {
-  let result: Array<Product> = [];
+export function getDataFilter() {
+  let result: Product[] = [];
+
+  const filter = objectSave[0].saveFilter;
+
   result = data.filter((el) => {
     if (
       (+filter.year[0] <= +el.year &&

@@ -2,7 +2,7 @@ import { objectSave } from '../../../modules/storage/storage';
 import { Product } from '../../../types';
 
 export function renderCountSlider(data: Array<Product>) {
-  const counts: Array<number> = [];
+  const counts: number[] = [];
 
   data.map((el) => counts.push(+el.count));
 

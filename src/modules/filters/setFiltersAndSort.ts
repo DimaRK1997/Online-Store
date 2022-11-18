@@ -20,7 +20,7 @@ function setCheckedFilters<Key extends keyof Filter>(name: Key) {
   const elements: NodeListOf<HTMLInputElement> = document.querySelectorAll(`#${name}`);
 
   elements.forEach((e1) => {
-    const arr = objectSave[0].saveFilter[name] as Array<string>;
+    const arr = objectSave[0].saveFilter[name] as string[];
     arr.map((e2) => {
       if (e1.dataset[name] === e2) {
         e1.checked = true;

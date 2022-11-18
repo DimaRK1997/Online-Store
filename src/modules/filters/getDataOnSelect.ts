@@ -1,9 +1,11 @@
 import { Product } from '../../types';
+import { objectSave } from '../storage/storage';
 import { getDataFilter } from './getDataOnFilter';
-import { Filter } from '../../types';
 
-export function getDataSelect(option: string, filter: Filter) {
-  let updateData: Product[] = getDataFilter(filter);
+export function getDataSelect() {
+  let updateData: Product[] = getDataFilter();
+
+  const option = objectSave[0].optionActive;
 
   if (option === '1') updateData = mySortAZ(updateData, 'name');
   if (option === '2') updateData = mySortZA(updateData, 'name');

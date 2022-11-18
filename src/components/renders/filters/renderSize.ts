@@ -1,7 +1,7 @@
 import { Product } from '../../../types';
 
 export function renderSize(data: Array<Product>) {
-  const colors: Array<string> = [];
+  const colors: string[] = [];
 
   data.map((el) => colors.push(el.size));
 

@@ -1,7 +1,7 @@
 import { Product } from '../../../types';
 
 export function renderShapes(data: Array<Product>) {
-  const shapes: Array<string> = [];
+  const shapes: string[] = [];
 
   data.map((el) => shapes.push(el.shape));
 

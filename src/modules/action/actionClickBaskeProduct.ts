@@ -7,19 +7,20 @@ export function actionProduct(e: Event) {
   let sum = objectSave[0].sizeBasked;
 
   if (target.classList.contains('marker')) {
-    sum = sum - 1;
+    sum--;
     target.classList.remove('marker');
   } else if (target.classList.contains('btn-basket') && sum < 10) {
-    sum = sum + 1;
+    sum++;
     target.classList.add('marker');
   }
 
-  sum ? (spanElement.style.display = 'block') : (spanElement.style.display = 'none');
-  objectSave[0].sizeBasked = sum;
-
-  if (sum) {
-    spanElement.textContent = sum + '';
+  if ((objectSave[0].sizeBasked = sum)) {
+    spanElement.style.display = 'block';
+    spanElement.textContent = String(sum);
   } else {
+    spanElement.style.display = 'none';
     spanElement.textContent = '';
   }
 }
+
+// function randerBasked() {}

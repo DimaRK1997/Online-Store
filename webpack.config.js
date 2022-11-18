@@ -29,6 +29,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './index.html',
+      favicon: "./assets/icon.png",
       minify: {
         collapseWhitespace: isProd,
       },

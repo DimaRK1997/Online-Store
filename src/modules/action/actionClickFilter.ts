@@ -26,7 +26,7 @@ export function actionClickFilter(e: Event) {
     search.value = '';
     search.classList.remove('active');
 
-    const data = getDataSelect(objectSave[0].optionActive, objectSave[0].saveFilter);
+    const data = getDataSelect();
     renderElements(data);
   }
 }
@@ -34,7 +34,7 @@ export function actionClickFilter(e: Event) {
 export function showSortData() {
   getFilters();
 
-  const data = getDataSelect(objectSave[0].optionActive, objectSave[0].saveFilter);
+  const data = getDataSelect();
 
   const search: HTMLInputElement = document.querySelector('.search-input');
   const updateData = data.filter((el) => el.name.toLowerCase().includes(search.value.toLowerCase()));
