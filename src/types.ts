@@ -24,6 +24,6 @@ export type Data = [
   {
     saveFilter: Filter;
     optionActive: string;
-    sizeBasked: number;
+    countBasket: string[];
   }
 ];

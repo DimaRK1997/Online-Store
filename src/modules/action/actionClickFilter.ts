@@ -1,4 +1,4 @@
-import { renderElements } from '../../components/renderElements';
+import { renderFilters } from '../../components/renders/renderFilterss';
 import { renderProducts } from '../../components/renders/renderProducts';
 import { getDataSelect } from '../filters/getDataOnSelect';
 import { getFilters } from '../filters/getFilters';
@@ -27,7 +27,8 @@ export function actionClickFilter(e: Event) {
     search.classList.remove('active');
 
     const data = getDataSelect();
-    renderElements(data);
+    renderFilters(data);
+    renderProducts(data);
   }
 }
 

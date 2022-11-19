@@ -1,3 +1,5 @@
+import { renderCountBasket } from '../../modules/action/actionClickBaskeProduct';
+import { objectSave } from '../../modules/storage/storage';
 import { Product } from '../../types';
 
 export function renderProducts(data: Array<Product>) {
@@ -5,7 +7,7 @@ export function renderProducts(data: Array<Product>) {
 
   element.innerHTML = data
     .map((el) => {
-      return `<div class="item_product">
+      return `<div id=index${el.num} class="item_product">
                 <div class="card">
                   <p class="title-name">${el.name[0].toUpperCase() + el.name.slice(1)}</p>
                   <div class="figure"></div>
@@ -46,4 +48,15 @@ export function renderProducts(data: Array<Product>) {
               </div>`;
     })
     .join('');
+
+  randerActiveBasket();
+  renderCountBasket();
+}
+
+function randerActiveBasket() {
+  objectSave[0].countBasket.map((e) => {
+    const card = document.getElementById(`${e}`);
+    const button = card.querySelector('.btn-basket');
+    button.classList.add('marker');
+  });
 }

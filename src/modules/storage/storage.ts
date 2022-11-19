@@ -15,7 +15,7 @@ export const objectSave: Data = userStorage || [
       favorite: false,
     },
     optionActive: '0',
-    sizeBasked: 0,
+    countBasket: [],
   },
 ];
 
