@@ -2,9 +2,7 @@ import { objectSave } from '../../../modules/storage/storage';
 import { Product } from '../../../types';
 
 export function renderCountSlider(data: Array<Product>) {
-  const counts: number[] = [];
-
-  data.map((el) => counts.push(+el.count));
+  const counts = data.map((el) => +el.count);
 
   const minDefault = Math.min.apply(null, counts);
   const maxDefault = Math.max.apply(null, counts);

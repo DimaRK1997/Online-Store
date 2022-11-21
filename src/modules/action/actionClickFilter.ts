@@ -1,4 +1,4 @@
-import { renderFilters } from '../../components/renders/renderFilterss';
+import { renderFilters } from '../../components/renders/renderFilters';
 import { renderProducts } from '../../components/renders/renderProducts';
 import { getDataSelect } from '../filters/getDataOnSelect';
 import { getFilters } from '../filters/getFilters';

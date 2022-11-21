@@ -1,6 +1,13 @@
+import { renderCountBasket } from '../../components/renders/renderProducts';
 import { objectSave, setStorage } from '../storage/storage';
 
 export function actionProduct(e: Event) {
+  clickBasket(e);
+  renderCountBasket();
+  setStorage();
+}
+
+function clickBasket(e: Event) {
   const target = e.target as HTMLElement;
   const element = target.parentElement.parentElement.parentElement;
 
@@ -17,21 +24,5 @@ export function actionProduct(e: Event) {
   ) {
     objectSave[0].countBasket.push(id);
     target.classList.add('marker');
-  }
-
-  renderCountBasket();
-  setStorage();
-}
-
-export function renderCountBasket() {
-  const spanElement: HTMLElement = document.querySelector('.size-basket');
-  const sum = objectSave[0].countBasket.length;
-
-  if (sum) {
-    spanElement.style.display = 'block';
-    spanElement.textContent = String(sum);
-  } else {
-    spanElement.style.display = 'none';
-    spanElement.textContent = '';
   }
 }

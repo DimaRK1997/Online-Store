@@ -157,20 +157,10 @@ input[type='search']:hover {
   font-weight: 700;
 }
 
-/* //asdasfsadfsd */
-
-/* body {
-    margin: 0;
-    padding: 0;
-    border: 0;
-} */
-
 .count,
 .years {
   position: relative;
   margin-top: 10px;
-  /* pointer-events: none; */
-  /* width: 200px; */
   height: 40px;
   padding-bottom: 10px;
 }
@@ -183,8 +173,6 @@ input[type='search']:hover {
   justify-content: space-between;
 }
 
-.get-left {
-}
 .input-min,
 .input-max {
   text-align: center;
@@ -192,9 +180,6 @@ input[type='search']:hover {
   border-radius: 6px;
   border: 1px solid rgb(122, 120, 124);
   height: 20px;
-}
-
-.get-rigth {
 }
 
 .input-slider {
@@ -217,7 +202,6 @@ input[type='search']:hover {
   margin: 0;
   width: 100%;
   appearance: none;
-  /* opacity: 0; */
 }
 
 .input-left::-webkit-slider-thumb,
@@ -241,10 +225,6 @@ input[type='search']:hover {
   height: 100%;
   border-radius: 4px;
 }
-
-/*  0 5px;
-  width: 30px;
-} */
 
 .item {
   height: 25px;
@@ -324,9 +304,6 @@ label {
   justify-content: flex-end;
 }
 
-.title-assortment {
-}
-
 .assortment-items {
   margin-left: 5px;
 }
@@ -337,12 +314,6 @@ label {
   border-radius: 5px;
   height: 20px;
   cursor: pointer;
-}
-
-.meals {
-}
-
-.product {
 }
 
 .items_product {
@@ -363,7 +334,6 @@ label {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
   border-radius: 10px;
   box-shadow: 0px 0px 10px #5c4f4f;
 }
@@ -434,8 +404,3 @@ label {
 .marker {
   background: #417d61;
 }
-
-/* .marker:hover {
-  background: #417d61;
-  background: #464cf9ed;
-} */

@@ -1,8 +1,13 @@
-import { renderCountBasket } from '../../modules/action/actionClickBaskeProduct';
 import { objectSave } from '../../modules/storage/storage';
 import { Product } from '../../types';
 
 export function renderProducts(data: Array<Product>) {
+  renderCards(data);
+  randerActiveBasket();
+  renderCountBasket();
+}
+
+function renderCards(data: Array<Product>) {
   const element = document.getElementById('items_product');
 
   element.innerHTML = data
@@ -48,9 +53,6 @@ export function renderProducts(data: Array<Product>) {
               </div>`;
     })
     .join('');
-
-  randerActiveBasket();
-  renderCountBasket();
 }
 
 function randerActiveBasket() {
@@ -59,4 +61,17 @@ function randerActiveBasket() {
     const button = card.querySelector('.btn-basket');
     button.classList.add('marker');
   });
+}
+
+export function renderCountBasket() {
+  const spanElement: HTMLElement = document.querySelector('.size-basket');
+  const sum = objectSave[0].countBasket.length;
+
+  if (sum) {
+    spanElement.style.display = 'block';
+    spanElement.textContent = String(sum);
+  } else {
+    spanElement.style.display = 'none';
+    spanElement.textContent = '';
+  }
 }

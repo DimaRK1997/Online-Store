@@ -2,9 +2,7 @@ import { objectSave } from '../../../modules/storage/storage';
 import { Product } from '../../../types';
 
 export function renderYearSlider(data: Array<Product>) {
-  const years: number[] = [];
-
-  data.map((el) => years.push(+el.year));
+  const years = data.map((el) => +el.year);
 
   const minDefault = Math.min.apply(null, years);
   const maxDefault = Math.max.apply(null, years);
