@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <h1>Online-Storage</h1>
+      </div>
+      <nav class="navigation">
+        <div class="search">
+          <input type="search" class="search-input" placeholder="Поиск . . ." />
+
+          <div class="search-icon"></div>
+        </div>
+
+        <div class="basket" title="Корзина">
+          <span class="size-basket"></span>
+        </div>
+      </nav>
+    </header>
+    <main class="content">
+      <div class="content__filters">
+        <form>
+          <div class="filters">
+            <h4 class="title-filters">Фильтры</h4>
+            <div class="filter filter_year">
+              <span class="title-filter">Год:</span>
+              <div id="years" class="years"></div>
+            </div>
+            <div class="filter filter_count">
+              <span class="title-filter">Количество:</span>
+              <div id="count" class="count"></div>
+            </div>
+            <div class="filter filter_shape">
+              <span class="title-filter">Фигура:</span>
+              <div id="items_shape" class="items_shape"></div>
+            </div>
+            <div class="filter filter_color">
+              <span class="title-filter">Цвет:</span>
+              <div id="items_color" class="items_color"></div>
+            </div>
+            <div class="filter filter_size">
+              <span class="title-filter">Размер:</span>
+              <div id="items_size" class="items_size"></div>
+            </div>
+            <div class="filter filter_favorite">
+              <span class="title-filter">Популярные:</span>
+              <div class="item item-favorite">
+                <label><input type="checkbox" name="favorite" id="favorite" />&#160; да / нет</label>
+              </div>
+            </div>
+            <div class="reset-enter">
+              <div class="reset">
+                <input type="button" class="btn-reset" value="Сбросить" />
+              </div>
+              <div class="enter">
+                <input type="button" class="btn-enter" value="Применить" />
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="content__product">
+        <div class="title_product">
+          <span>Каталог товаров</span>
+        </div>
+        <div class="assortment filter_assortment">
+          <p class="title-assortment">cортировать по:</p>
+          <div class="assortment-items">
+            <select class="select-control category">
+              <option value="0" selected="" class="meals">Все</option>
+              <option value="1" class="meals">По названию, от А до Я</option>
+              <option value="2" class="meals">По названию, от Я до А</option>
+              <option value="3" class="meals">По году, по возрастанию</option>
+              <option value="4" class="meals">По году, по убыванию</option>
+              <option value="5" class="meals">По количеству, по возрастанию</option>
+              <option value="6" class="meals">По количеству, по убыванию</option>
+            </select>
+          </div>
+        </div>
+        <div class="product">
+          <div id="items_product" class="items_product"></div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
